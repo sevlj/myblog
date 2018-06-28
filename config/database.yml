@@ -7,13 +7,13 @@ default: &default
       host:     <%= ENV['IP'] %>
 
 development:
-  <<: *default
+  <<: sqlite3
   database: my_database_development
 
 test:
   <<: *default
-  database: my_database_test
+  database: db/development.sqlite3
 
 production:
-  <<: *default
+  <<: postgresql
   database: my_database_productions
