@@ -19,12 +19,12 @@
   <% end %>
 
   <p>
-    <%= form.label :title %><br>
+    <%= form.label :Name %><br>
     <%= form.text_field :title %>
   </p>
 
   <p>
-    <%= form.label :text %><br>
+    <%= form.label :Content %><br>
     <%= form.text_area :text %>
   </p>
 
@@ -34,6 +34,6 @@
 
 <% end %>
 
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Back', articles_path, {class: "btn btn-secondary"} %>
 <center>
 </div>
