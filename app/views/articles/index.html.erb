@@ -1,38 +1,35 @@
 <div class="container">
   <div class="row">
-  <h1> <b>BLOG</b> </h1> <p>
+  <h1> <b>Blog</b> </h1> <p>
 </p> </div>
 <div class="row"
-<p>  <h2>Articles List...</h2> </p>
+<p>  <h2>Articles List</h2> </p>
 </div>
 <div class="row">
 <%= link_to 'New article', new_article_path, {class: "btn btn-outline-success btn-block"} %>
 <p> </div>
+</div>
 
-<table>
+<table class="table">
+  <thead>
   <tr>
     <th>Title</th>
     <th>Text</th>
-    <th colspan="5"></th>
-  </tr>
+    <th colspan="8"></th>
+  </tr> </thead>
 
-<div class="row"
+<tbody>
   <% @articles.each do |article| %>
     <tr>
-      <div class="col">
         <td><%= article.title %></td>
-      </div>
-      <div class="col">
-          <td><%= article.text %></td>
-      </div>
-      <div class="col">
-        <td><%= link_to 'Show', article_path(article), { class: "btn btn-primary"} %></td>
+            <td><%= article.text %></td>
+          <td><%= link_to 'Show', article_path(article), { class: "btn btn-primary"} %></td>
         <td><%= link_to 'Edit', edit_article_path(article), {class: "btn btn-secondary"} %></td>
         <td><%= link_to 'Delete Article', article_path(article),
                 method: :destroy,
                 data: { confirm: 'Are you sure?' } %></td>
-              </div>
-      </tr>
+        </tr>
+      </tbody>
   <% end %>
 </table>
 </div>
