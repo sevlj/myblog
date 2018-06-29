@@ -1,5 +1,9 @@
+<div class="container">
+<center>
+  <h2> <b> Create a new article </b> </h2>
+  <p>
 <%= form_with scope: :article, url: articles_path, local: true do |form| %>
-
+</p>
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -31,3 +35,5 @@
 <% end %>
 
 <%= link_to 'Back', articles_path %>
+<center>
+</div>

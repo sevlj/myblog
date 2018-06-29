@@ -1,20 +1,30 @@
-<center>
-<p>
-  <strong>Title:</strong>
+<div class="container">
+<div class="row">
+<h1> <b> Blog </b> </h1> <p>
+</div>
+<div class="row">
+<div class="col">
+</p> <p>
+  <h4> <b> Article Title: </b> </h4>
   <%= @article.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
+  <p>
+  <h4> <b> Text: </b> </h4>
   <%= @article.text %>
 </p>
-
-<h3> <b> Comments: </b> </h3>
+</div>
+ <div class="col">
+   <p>
+<h4> Comments: </b> </h4>
 <%= render @article.comments %>
-<p>
-<h3>Add a comment below.</h3>
+</p>
+</div>
+<div class="col">
+  <p>
+<h4>Post a comment:</h4>
 <%= render 'comments/form' %>
 </p>
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+</div> </div> </div>
+<center>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
 </center>
